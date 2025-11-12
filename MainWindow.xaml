@@ -1,0 +1,258 @@
+﻿<Window x:Class="TRPO_Prakt7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRPO_Prakt7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="800">
+    <Window.Resources>
+        <local:Doctor x:Key="register_doctor"/>
+        <local:Doctor x:Key="login_doctor"/>
+        <local:Pacient x:Key="create_pacient"/>
+        <local:Pacient x:Key="found_pacient"/>
+        <local:Pacient x:Key="edit_pacient"/>
+        <local:Pacient x:Key="appointment_pacient"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1" Padding="5">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource register_doctor}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="2" Content="Фамилия:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="2" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="2" Content="Специальность:" Grid.Row="3" Grid.Column="0"/>
+                <Label Margin="2" Content="Пароль:" Grid.Row="4" Grid.Column="0"/>
+                <Label Margin="2" Content="Подтвердите пароль:" Grid.Row="5" Grid.Column="0"/>
+                
+
+                <TextBox Name="FirstNameTextBox"  Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}" />
+                <TextBox Name="LastNameTextBox" Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding LastName}" />
+                <TextBox Name="MiddleNameTextBox" Margin="2" Grid.Row="2" Grid.Column="1" Text="{Binding MiddleName}" />
+                <TextBox Name="SpecTextBox" Margin="2" Grid.Row="3" Grid.Column="1" Text="{Binding Specialization}" />
+                <TextBox Name="PassTextBox" Margin="2" Grid.Row="4" Grid.Column="1" Text="{Binding Password}"/>
+                <TextBox Name="ConfirmPassTextBox" Margin="2" Grid.Row="5" Grid.Column="1" Text="{Binding ConfirmPassword}"/>
+
+                <Button Name="RegisterButton" Margin="2" Grid.ColumnSpan="2" Grid.Row="6" Content="Регистрация" Click="RegisterButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource login_doctor}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="2" Content="ID:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="2" Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
+
+                <TextBox Name="IDTextBox" Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding Id}"/>
+                <TextBox Name="PassLoginTextBox" Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding Password}"/>
+
+                <Button Name="LoginButton" Margin="2" Grid.ColumnSpan="2" Grid.Row="2" Content="Вход" Click="LoginButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+            <StackPanel Orientation="Vertical" Margin="2">
+                <StackPanel.DataContext>
+                    <Binding Source="{StaticResource login_doctor}"/>
+                </StackPanel.DataContext>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="2" Content="ID:" />
+                    <Label Name="DoctorInfoId" Margin="2" Content="{Binding Id}" Visibility="Hidden"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="2" Content="Имя:" />
+                    <Label Margin="2" Content="{Binding FirstName}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="2" Content="Фамилия:"/>
+                    <Label Margin="2" Content="{Binding LastName}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="2" Content="Отчество:"/>
+                    <Label Margin="2" Content="{Binding MiddleName}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="2" Content="Специальность:"/>
+                    <Label Margin="2" Content="{Binding Specialization}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Name="CreatePacientBorder" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" BorderBrush="Black" BorderThickness="1" Padding="5" IsEnabled="False">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource create_pacient}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="2" Content="Фамилия:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="2" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="2" Content="День рождения:" Grid.Row="3" Grid.Column="0"/>
+
+
+                <TextBox Name="PacientFirstNameTextBox"  Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}" />
+                <TextBox Name="PacientLastNameTextBox" Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding LastName}" />
+                <TextBox Name="PacientMiddleNameTextBox" Margin="2" Grid.Row="2" Grid.Column="1" Text="{Binding MiddleName}" />
+                <TextBox Name="PacientBirthdayTextBox" Margin="2" Grid.Row="3" Grid.Column="1" Text="{Binding Birthday}" />
+
+                <Button Name="PacientCreateButton" Margin="2" Grid.ColumnSpan="2" Grid.Row="4" Content="Добавить" Click="PacientCreateButton_Click"/>
+            </Grid>
+        </Border>
+        
+        <Border Name="EditPacientBorder" Grid.Column="2" Grid.Row="3" BorderBrush="Black" BorderThickness="1" Padding="5" IsEnabled="False">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource edit_pacient}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="2" Content="Фамилия:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="2" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="2" Content="День рождения:" Grid.Row="3" Grid.Column="0"/>
+
+
+                <TextBox Name="PacientEditFirstNameTextBox"  Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}" />
+                <TextBox Name="PacientEditLastNameTextBox" Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding LastName}" />
+                <TextBox Name="PacientEditMiddleNameTextBox" Margin="2" Grid.Row="2" Grid.Column="1" Text="{Binding MiddleName}" />
+                <TextBox Name="PacientEditBirthdayTextBox" Margin="2" Grid.Row="3" Grid.Column="1" Text="{Binding Birthday}" />
+
+                <Button Name="PacientEditButton" Margin="2" Grid.Row="4" Content="Сохранить" Click="PacientEditButton_Click"/>
+                <Button Name="PacientEditResetButton" Margin="2" Grid.Row="4" Grid.Column="1" Content="Сбросить" Click="PacientEditResetButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Name="FindPacientBorder" Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="1" Padding="5" IsEnabled="False">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource found_pacient}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="ID пациента:" Grid.Row="0" Grid.Column="0"/>
+
+
+                <TextBox Name="PacientFindIdTextBox"  Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding Id}" />
+
+                <Button Name="PacientFindButton" Margin="2" Grid.ColumnSpan="2" Grid.Row="1" Content="Найти" Click="PacientFindButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Name="AppointmentBorder" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" BorderBrush="Black" BorderThickness="1" Padding="5" IsEnabled="False">
+            <Grid>
+                <Grid.DataContext>
+                    <Binding Source="{StaticResource appointment_pacient}" />
+                </Grid.DataContext>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="{Binding Id}"/>
+                <Label Margin="2" Content="Дата приёма:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="2" Content="Доктор:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="2" Content="Диагноз:" Grid.Row="3" Grid.Column="0"/>
+                <Label Margin="2" Content="Рекомендации:" Grid.Row="4" Grid.Column="0"/>
+
+                <TextBox Name="PacientAppEditLastAppointmentTextBox"  Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding LastAppointment}" />
+                <TextBox Name="PacientAppEditLastDoctorTextBox" Margin="2" Grid.Row="2" Grid.Column="1" Text="{Binding LastDoctor}" IsEnabled="False"/>
+                <TextBox Name="PacientAppEditDiagnosisTextBox" Margin="2" Grid.Row="3" Grid.Column="1" Text="{Binding Diagnosis}" />
+                <TextBox Name="PacientAppEditRecomendationsTextBox" Margin="2" Grid.Row="4" Grid.Column="1" Text="{Binding Recomendations}" />
+
+                <Button Name="PacientAppApplyButton" Margin="2" Grid.Row="5" Grid.ColumnSpan="2" Content="Отметить" Click="PacientAppApplyButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1" Padding="5">
+            <StackPanel Orientation="Horizontal">
+                <Label Name="DoctorCountLabel"/>
+                <Label Name="PacientCountLabel"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
