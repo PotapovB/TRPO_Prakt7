@@ -1,0 +1,42 @@
+C:\Programming\CSharp Projects\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.exe
+C:\Programming\CSharp Projects\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.deps.json
+C:\Programming\CSharp Projects\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.runtimeconfig.json
+C:\Programming\CSharp Projects\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.dll
+C:\Programming\CSharp Projects\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.pdb
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\App.g.cs
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7_MarkupCompile.cache
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7_MarkupCompile.lref
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.g.resources
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.AssemblyInfoInputs.cache
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.AssemblyInfo.cs
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.dll
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\refint\TRPO_Prakt7.dll
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.pdb
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.genruntimeconfig.cache
+C:\Programming\CSharp Projects\TRPO_Prakt7\obj\Debug\net8.0-windows\ref\TRPO_Prakt7.dll
+C:\Users\st310-07\Downloads\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.exe
+C:\Users\st310-07\Downloads\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.deps.json
+C:\Users\st310-07\Downloads\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.runtimeconfig.json
+C:\Users\st310-07\Downloads\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.dll
+C:\Users\st310-07\Downloads\TRPO_Prakt7\bin\Debug\net8.0-windows\TRPO_Prakt7.pdb
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7_MarkupCompile.cache
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7_MarkupCompile.lref
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.g.resources
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.AssemblyInfoInputs.cache
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.AssemblyInfo.cs
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.csproj.CoreCompileInputs.cache
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.sourcelink.json
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.dll
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\refint\TRPO_Prakt7.dll
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.pdb
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\TRPO_Prakt7.genruntimeconfig.cache
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\ref\TRPO_Prakt7.dll
+C:\Users\st310-07\Downloads\TRPO_Prakt7\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
